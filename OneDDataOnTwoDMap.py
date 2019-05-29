@@ -4,8 +4,10 @@ from shapely.geometry import Point
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from collections import OrderedDict
+import os
 
 #df = pd.DataFrame(pd.read_csv('ggl.csv'))
+os.chdir('C:\\Users\\sachi\\.vscode\\GitHubRepos\\visualizations')
 df = pd.DataFrame(pd.read_csv('cal_val.csv'))
 df['Coordinates'] = list(zip(df.longitude, df.latitude))
 df['Coordinates'] = df['Coordinates'].apply(Point)
